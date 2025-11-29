@@ -6,6 +6,90 @@
     <title>Landing Page Tai nghe ABC</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: #f3f6fa;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero-content {
+            max-width: 500px;
+            margin-bottom: 18px;
+        }
+        .hero-content h1 {
+            color: #1abc9c;
+            font-size: 2em;
+        }
+        .hero-image img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            border: 2px solid #1abc9c;
+        }
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+            margin: 30px 0 40px 0;
+        }
+        .feature {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+            padding: 18px 10px;
+            text-align: center;
+        }
+        .icon {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+        }
+        .gallery-section {
+            margin: 40px 0;
+        }
+        .gallery-title {
+            text-align: center;
+            color: #222;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            justify-items: center;
+        }
+        .product-gallery img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+            border: 2px solid #eaeaea;
+            transition: transform 0.2s;
+        }
+        .product-gallery img:hover {
+            transform: scale(1.04);
+            border-color: #1abc9c;
+        }
+        @media (max-width: 600px) {
+            .product-gallery {
+                grid-template-columns: 1fr;
+            }
+            .product-gallery img {
+                width: 98vw;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="glass-header">
@@ -24,63 +108,54 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Âm Thanh Vượt Trội - Tự Do Tuyệt Đối</h1>
-                <p>Khám phá trải nghiệm âm thanh không dây đỉnh cao với tai nghe ABC. Chống ồn chủ động, pin lâu, kết nối siêu nhanh.</p>
-                <button class="cta">Mua Ngay</button>
-            </div>
-            <div class="hero-image">
-                <img src="../images/headphone.jpg" alt="Tai nghe ABC">
-            </div>
         </section>
         <section id="features" class="features">
             <h2>Tính năng nổi bật</h2>
-            <div class="features-list">
-                <div class="feature fade-in">
-                    <span class="icon">🎧</span>
-                    <h3>Chống ồn chủ động</h3>
-                    <p>Loại bỏ tiếng ồn môi trường, tận hưởng âm nhạc trọn vẹn.</p>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Âm Thanh Vượt Trội - Tự Do Tuyệt Đối</h1>
+                    <p>Khám phá trải nghiệm âm thanh không dây đỉnh cao với tai nghe ABC. Chống ồn chủ động, pin lâu, kết nối siêu nhanh.</p>
+                    <button class="cta">Mua Ngay</button>
                 </div>
-                <div class="feature fade-in">
-                    <span class="icon">🔋</span>
-                    <h3>Pin 24 giờ</h3>
-                    <p>Thời lượng pin cực lâu, nghe nhạc cả ngày không lo hết pin.</p>
+                <div class="hero-image">
+                    <img src="../images/headphone.jpg" alt="Tai nghe ABC">
                 </div>
-                <div class="feature fade-in">
-                    <span class="icon">📶</span>
-                    <h3>Kết nối Bluetooth 5.2</h3>
-                    <p>Kết nối nhanh, ổn định với mọi thiết bị.</p>
+            </section>
+            <section id="features" class="features">
+                <h2 style="text-align:center;color:#1abc9c;margin-bottom:18px;">Tính năng nổi bật</h2>
+                <div class="features-list">
+                    <div class="feature fade-in">
+                        <span class="icon">🎧</span>
+                        <h3>Chống ồn chủ động</h3>
+                        <p>Loại bỏ tiếng ồn môi trường, tận hưởng âm nhạc trọn vẹn.</p>
+                    </div>
+                    <div class="feature fade-in">
+                        <span class="icon">🔋</span>
+                        <h3>Pin 24 giờ</h3>
+                        <p>Thời lượng pin cực lâu, nghe nhạc cả ngày không lo hết pin.</p>
+                    </div>
+                    <div class="feature fade-in">
+                        <span class="icon">📶</span>
+                        <h3>Kết nối Bluetooth 5.2</h3>
+                        <p>Kết nối nhanh, ổn định với mọi thiết bị.</p>
+                    </div>
+                    <div class="feature fade-in">
+                        <span class="icon">💧</span>
+                        <h3>Kháng nước IPX5</h3>
+                        <p>Thoải mái vận động, không lo mồ hôi hay mưa nhẹ.</p>
+                    </div>
                 </div>
-                <div class="feature fade-in">
-                    <span class="icon">💧</span>
-                    <h3>Kháng nước IPX5</h3>
-                    <p>Thoải mái vận động, không lo mồ hôi hay mưa nhẹ.</p>
+            </section>
+            <section id="gallery" class="gallery-section">
+                <div class="gallery-title">Thư viện ảnh sản phẩm</div>
+                <div class="product-gallery">
+                    <!-- Đặt các ảnh sản phẩm vào đây, ví dụ: -->
+                    <img src="../images/gallery1.jpg" alt="Tai nghe 1">
+                    <img src="../images/gallery2.jpg" alt="Tai nghe 2">
+                    <img src="../images/gallery3.jpg" alt="Tai nghe 3">
+                    <img src="../images/headphone.jpg" alt="Tai nghe ABC">
                 </div>
-            </div>
-        </section>
-        <section id="gallery" class="gallery-section">
-            <h2>Thư viện ảnh sản phẩm</h2>
-            <div class="gallery">
-                <div class="gallery-main">
-                    <img id="mainImage" src="../images/gallery1.jpg" alt="Ảnh sản phẩm lớn">
-                </div>
-                <div class="gallery-thumbnails">
-                    <img class="thumbnail active" src="../images/gallery1.jpg" alt="Thumb 1" data-img="../images/gallery1.jpg">
-                    <img class="thumbnail" src="../images/gallery2.jpg" alt="Thumb 2" data-img="../images/gallery2.jpg">
-                    <img class="thumbnail" src="../images/gallery3.jpg" alt="Thumb 3" data-img="../images/gallery3.jpg">
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="contact-section">
-            <h2>Liên hệ</h2>
-            <p>Họ tên: Đoàn Gia Bảo</p>
-            <p>MSSV: 241A010766</p>
-            <p>Facebook: <a href="https://www.facebook.com/younglafire" target="_blank">younglafire</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Đoàn Gia Bảo - ABC Headphones</p>
+            </section>
     </footer>
     <script src="js/app.js"></script>
 </body>

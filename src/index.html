@@ -1,64 +1,78 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ | Đoàn Gia Bảo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Đoàn Gia Bảo | Trang cá nhân</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="profile">
-            <!-- Avatar: Đặt ảnh avatar vào đây -->
-            <img src="../images/avatar.jpg" alt="Avatar" class="avatar">
-            <div class="info">
-                <h1>Đoàn Gia Bảo</h1>
-                <p>MSSV: 241A010766</p>
-                <a href="https://www.facebook.com/younglafire" target="_blank">Facebook</a>
-            </div>
+    <header class="glass-header">
+        <div class="logo">
+            <span>Đoàn Gia Bảo</span>
         </div>
         <nav>
             <ul>
-                <li><a href="#home" class="active">Trang chủ</a></li>
-                <li><a href="bai01.html">Bài tập 1</a></li>
-                <li><a href="bai02.html">Bài tập 2</a></li>
+                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="bai01.html">Landing Page Tai nghe</a></li>
+                <li><a href="bai02.html">Game đoán số</a></li>
                 <li><a href="#gallery">Thư viện ảnh</a></li>
                 <li><a href="#contact">Liên hệ</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="home">
-            <h2>Chào mừng đến với trang chủ!</h2>
-            <p>Đây là trang điều hướng chính cho các bài tập và thông tin cá nhân.</p>
-        </section>
-        <section id="bt1">
-            <h2>Bài tập 1</h2>
-            <!-- Đặt ảnh minh họa cho bài tập 1 (ví dụ: tai nghe) vào đây -->
-            <img src="../images/headphone.jpg" alt="Ảnh tai nghe" class="illustration">
-            <p>Nội dung bài tập 1 sẽ được cập nhật tại đây.</p>
-        </section>
-        <section id="bt2">
-            <h2>Bài tập 2</h2>
-            <img src="../images/gallery4.png" alt="Ảnh bài tập 2" class="illustration">
-            <p>Nội dung bài tập 2 sẽ được cập nhật tại đây.</p>
-        </section>
-        <section id="gallery">
-            <h2>Thư viện ảnh</h2>
-            <div class="gallery">
-                <!-- Đặt các ảnh vào thư mục images và import tại đây -->
-                <!-- Ví dụ: <img src="../images/photo1.jpg" alt="Ảnh 1"> -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Xin chào, mình là Đoàn Gia Bảo</h1>
+                <p>MSSV: <strong>241A010766</strong></p>
+                <p>Mình là sinh viên ngành Công nghệ thông tin, thích sáng tạo, học hỏi và chia sẻ kiến thức về web, AI, và công nghệ mới. Đam mê phát triển sản phẩm số, thiết kế web, và trải nghiệm người dùng.</p>
+                <p>Hoạt động nổi bật: <br>
+                    - Xây dựng các dự án web cá nhân, landing page, game nhỏ.<br>
+                    - Chia sẻ kiến thức về lập trình, UI/UX.<br>
+                    - Tham gia các hoạt động cộng đồng, hackathon, và các nhóm công nghệ.<br>
+                    - Thành thạo guitar điện và đam mê âm nhạc.<br>
+                </p>
+                <div style="margin: 18px 0;">
+                    <a href="https://www.facebook.com/younglafire" target="_blank" class="cta">Facebook</a>
+                    <a href="https://github.com/josephdoangiabao" target="_blank" class="cta" style="margin-left:12px;">Github</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Avatar của bạn, đặt đúng ảnh avatar vào đây -->
+                <img src="../images/avatar.jpg" alt="Avatar Đoàn Gia Bảo">
             </div>
         </section>
-        <section id="contact">
+        <section id="gallery" class="gallery-section">
+            <h2>Thư viện ảnh sử dụng trong bài</h2>
+            <div class="gallery grid-gallery">
+                <div class="grid-item">
+                    <img src="../images/headphone.jpg" alt="Tai nghe ABC">
+                </div>
+                <div class="grid-item">
+                    <img src="../images/gallery1.jpg" alt="Ảnh tai nghe từ landing page">
+                </div>
+                <div class="grid-item">
+                    <img src="../images/gallery2.jpg" alt="Ảnh tai nghe từ landing page">
+                </div>
+                <div class="grid-item">
+                    <img src="../images/gallery3.jpg" alt="Ảnh tai nghe từ landing page">  
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
             <h2>Liên hệ</h2>
-            <p>Họ tên: Đoàn Gia Bảo</p>
-            <p>MSSV: 241A010766</p>
+            <p>Họ tên: <strong>Đoàn Gia Bảo</strong></p>
+            <p>MSSV: <strong>241A010766</strong></p>
             <p>Facebook: <a href="https://www.facebook.com/younglafire" target="_blank">younglafire</a></p>
+            <p>Github: <a href="https://github.com/younglafire" target="_blank">younglafire</a></p>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 Đoàn Gia Bảo</p>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>
