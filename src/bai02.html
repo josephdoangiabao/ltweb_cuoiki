@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Đoán Số 50-150</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <header class="glass-header">
+        <div class="logo">
+            <span>Game Đoán Số</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="bai01.html">Landing Page Tai nghe</a></li>
+                <li><a href="#">Game đoán số</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="game-section">
+            <h1>Game Đoán Số Ngẫu Nhiên (50-150)</h1>
+            <p>Nhập số bạn đoán (từ 50 đến 150):</p>
+            <input type="number" id="guessInput" min="50" max="150" placeholder="Nhập số...">
+            <button id="guessBtn">Đoán</button>
+            <div id="result"></div>
+            <div id="tries">Số lần thử: 0</div>
+            <div id="confetti"></div>
+            <div class="explain">
+                <h3>Giải thích logic:</h3>
+                <ul>
+                    <li>Số ngẫu nhiên được tạo bằng <code>Math.floor(Math.random() * 101) + 50</code> (từ 50 đến 150).</li>
+                    <li>So sánh input với số ngẫu nhiên, báo quá cao/thấp/đúng.</li>
+                    <li>Đếm số lần thử, khi đúng thì hiện confetti bằng CSS.</li>
+                    <li>Kiểm tra input để tránh lỗi nhập ngoài khoảng.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Đoàn Gia Bảo - Game Đoán Số</p>
+    </footer>
+    <script src="js/game.js"></script>
+</body>
+</html>
